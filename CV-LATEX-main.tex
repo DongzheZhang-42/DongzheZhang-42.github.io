@@ -1,0 +1,290 @@
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+\usepackage{verbatim}
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Dongzhe Zhang} \\[6pt]
+\end{tabularx}
+
+% --- REEMPLAZAR CON ESTE BLOQUE DE CÓDIGO ---
+\begin{center}
+    \href{mailto:dongzhe.zhang@polimi.it}{\faEnvelope\ dongzhe.zhang@polimi.it} \quad|\quad
+    \faPhone\ +39 344 576 7917 \quad|\quad
+    \faMapMarker\ Milan, Italy \quad|\quad
+    \href{https://www.linkedin.com/in/dongzhe-zhang-88aa95280}{\faLinkedin\ LinkedIn} \quad|\quad
+    %\href{https://github.com/DongzheZhang-42}{\faGithub\ GitHub} \quad|\quad
+    \href{https://scholar.google.com.hk/citations?user=xjqVk8MAAAAJ&hl=zh-CN}{\faGraduationCap\ Google Scholar}
+\end{center}
+% --- FIN DEL BLOQUE DE CÓDIGO DE REEMPLAZO ---
+
+%EDUCATION
+\section{\textbf{EDUCATION}}
+\begin{tabularx}{\linewidth}{ @{}l r@{}}
+
+\textbf{Politecnico di Milano \& Northwestern Polytechnical University} \hfill \textbf{Apr. 2022 -- Expected Apr. 2027}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[noitemsep,after=\strut, leftmargin=1em, itemsep=2pt]
+    \item Dual Ph.D. Program (Based in Milan from Sep. 2024)
+    \item Lab: Image and Sound Processing Lab (ISPL) -- Advisor: Prof. Alberto Bernardini
+    \item Lab: Joint Laboratory of Environmental Sound Sensing -- Advisor: Prof. Jianfeng Chen
+\end{itemize}
+\end{minipage}
+\\[1pt]
+\textbf{Northwestern Polytechnical University} \hfill \textbf{Sept. 2019 -- Apr. 2022}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Master of Engineering (Major in Electronic and Communication Engineering)
+    \end{itemize}
+\end{minipage}
+\\[1pt]
+\textbf{Shaoxing University} \hfill \textbf{Sept. 2015 -- Jun. 2019}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Bachelor of Engineering (Major in Electronic Information Engineering)\\[2pt]
+    \end{itemize}
+\end{minipage}
+\\[1pt]
+\end{tabularx}
+
+\section{\textbf{RESEARCH INTERESTS}}
+
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item \textbf{Research Areas}: Deep Learning for Audio, Microphone Array Processing, Sound Source Localization, Speech Enhancement, Distributed Systems for Acoustic Sensing 
+        \item \textbf{Engineering \& Implementation Focus}: Edge AI Implementation, Embedded System Design for Audio Processing, Low-Power Algorithm Design \\
+    \end{itemize}
+\end{minipage}
+
+\section{\textbf{EXPERIENCE}}
+
+\textbf{Tianhe Defense Technology Co., Ltd.} Xi'an, China \hfill \textbf{Jun. 2019 -- Oct. 2019}\\[4pt]
+\textit{Embedded Software Engineer}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Engineered the complete firmware for the control unit of an Unmanned Underwater Vehicle.
+        \item Designed an edge-based algorithm for passive underwater target detection and guidance using a single hydrophone.
+    \end{itemize}
+    
+\textbf{LianFeng Acoustic Technologies Co., Ltd.} Xi'an, China  \hfill  \textbf{Oct. 2020 -- Oct. 2024} \\[4pt]
+\textit{Technical Co-founder \& Acoustic Engineer} 
+
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Co-founded an acoustic technology startup, securing initial funding. 
+        \item Leading a 5-person algorithm team to develop and commercialize a portfolio of advanced acoustic sensing products.
+        \item Directed the full R\&D lifecycle from algorithm design to embedded system deployment and performance validation. \\
+    \end{itemize}
+
+% ACADEMIC PROJECTS
+\section{\textbf{PROJECTS}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+
+\textbf{Unmanned Underwater Vehicle Control \& Guidance System} \hfill \textbf{Jun. 2019 -- Oct. 2019}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Developed the complete control unit firmware on an STM32 platform, enabling precise real-time control of propulsion motors and guidance servos.
+        \item Authored and implemented a novel passive target detection and guidance algorithm, designed for a single-hydrophone sensor and deployed on the edge for autonomous operation. 
+    \end{itemize}
+\end{minipage}
+\\[4pt]
+
+\textbf{Distributed Sound Event Localization \& Detection (SELD) System} \hfill \textbf{Oct. 2020 -- Oct. 2022}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Designed custom microphone arrays and developed core algorithms for sound source localization and anomalous event detection for wide-area monitoring.
+        \item Architected and deployed a distributed sensing system utilizing multiple microphone arrays, successfully validating its localization and detection performance in both indoor and outdoor environments. 
+    \end{itemize}
+\end{minipage}
+\\[4pt]
+
+\textbf{Acoustic Camera} \hfill \textbf{Mar. 2021 -- Oct. 2024}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Designed and simulated a novel spiral microphone array in MATLAB to optimize beamforming performance and noise suppression, subsequently assisting with FPGA implementation of the core algorithms.
+        \item Developed a multi-modal geometric calibration system by fusing video and audio streams and implemented a multi-target detection algorithm to resolve distinct sound sources across different frequency bands.
+    \end{itemize}
+\end{minipage}
+\\[4pt]
+
+\textbf{AI-Powered Unattended Ground Sensor (UGS)} \hfill \textbf{May 2021 -- Oct. 2024}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Engineered an end-to-end signal processing pipeline on an STM32 microcontroller, from data acquisition to transmitting processed results to a central controller.
+        \item Designed and deployed a deep learning model for real-time detection of anomalous sound and vibration signals on the microcontroller, achieving system-wide low-power operation through hardware/software co-optimization.
+    \end{itemize}
+\end{minipage}
+\\[4pt]
+
+\textbf{Geometry-Agnostic Speech Enhancement} \hfill \textbf{Jan. 2024 -- Present}\\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Developed a novel deep learning framework that decouples speech enhancement from array geometry by using an Eigenbeam transform to project sound fields into a universal, orthogonal feature space.
+        \\[4pt]
+    \end{itemize}
+\end{minipage}
+
+\end{tabularx}
+
+\begin{comment}
+\section{\textbf{LEADERSHIP}}
+\textbf{LianFeng Acoustic Technologies Co., Ltd.} \hfill \textbf{Oct. 2021 - Oct. 2024}\\[4pt]
+\textit{Technical Co-founder}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Fundraising \& Public Speaking: Led fundraising efforts, pitching to investors at 30+ roadshows.
+        \item Management: Managed a 5-person algorithm team, driving the development of the core product.
+        \\[4pt]
+    \end{itemize}
+\end{comment}
+
+
+\section{\textbf{COMPETITIONS}}
+
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item \textbf{2nd} Place, DCASE 2024 Challenge Task 10 (Acoustic-Based Traffic Monitoring)
+        \item Rank 6, DCASE 2023 Challenge Task 3 (Sound Event Localization and Detection in Real Spatial Sound Scenes)
+        \item Gold Award, China International "Internet+" College Students' Innovation and Entrepreneurship Competition, 2021
+        \\[4pt]
+    \end{itemize}
+\end{minipage}
+
+\section{\textbf{PUBLICATIONS}}
+\begin{tabularx}{\linewidth}{ @{}l r@{}}
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+
+        \item  \textbf{Zhang D}, Chen J, Wang M, Mezza A I, et al. On the Design of Efficient Neural Methods for Geometry-Agnostic Multichannel Speech Enhancement[C].  \textit{IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}, 2026, accepted.
+        
+        \item \textbf{Zhang D}, Chen J, Wang M, et al. Co-designing Eigenbeam and Multi-order Encoder for Geometry-Agnostic Speech Enhancement[C]. \textit{IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}, 2026, accepted.
+        
+        \item  \textbf{Zhang D}, Chen J, Bai J, et al. Sound Event Localization and Classification using Wireless Acoustic Sensor Networks in Outdoor Environments[J]. \textit{IEEE Sensors Journal}, 2025.
+        
+        \item \textbf{Zhang D}, Chen J, Bai J, et al. Multiple sound sources localization using sub-band spatial features and attention mechanism[J]. \textit{Circuits, Systems, and Signal Processing}, 2025, 44(4): 2592-2620.
+
+        \item \textbf{Zhang D}, Chen J, Huang S, et al. Synthesis-to-real robust training for enhanced sound event localization and detection using dynamic kernel convolution networks[J]. \textit{Applied Acoustics}, 2025, 228: 110267.    
+        
+        \item \textbf{Zhang D}, Chen J, Bai J, et al. DOA-based multi-node geometry calibration for wireless acoustic sensor network[C]//\textit{2023 IEEE International Conference on Signal Processing, Communications and Computing (ICSPCC)}. IEEE, 2023: 1-5.     
+
+        \item \textbf{Zhang D}, Bai J, Chen J. JLESS submission to DCASE 2024 Task10: An acoustic-based traffic monitoring solution[J]. \textit{DCASE 2024 Challenge}, Tech. Rep, 2024.
+
+        \item \textbf{Zhang D}, Bai J, Chen J. JLESS submission to DCASE2023 task3: Conformer with data augmentation for sound event localization and detection in real space.[J]. \textit{DCASE 2023 Challenge}, Tech. Rep, 2023.
+
+        \item Sun W, \textbf{Zhang D}, Bai J, et al. JLESS SUBMISSION TO DCASE2024 TASK3: Conformer with Data Augmentation for Sound Event Localization and Detection with Source Distance Estimation[R]. \textit{DCASE2024 Challenge}, Tech. Rep, 2024.
+
+       \item Han Y, Jianfeng C, \textbf{Dongzhe Z}. Passive homing method with reinforcement learning for a single hydrophone[J]. \textit{ACTA ACUSTICA}, 2025, 50(1): 59-67. 
+
+       \item Li X, Chen J, Bai J, et al. Deep learning-based DOA estimation using CRNN for underwater acoustic arrays[J]. \textit{Frontiers in Marine Science}, 2022, 9: 1027830. 
+
+       \item Niu Q, Shi W, Zhang Q, et al. Underwater Passive Sonar Fusion Detection Based on Sensor Bias Estimation and Classification[J]. \textit{Digital Signal Processing}, 2025: 105596.
+
+        \item Bai J, Wang M, Liu H, et al. Description on IEEE ICME 2024 grand challenge: Semi-supervised acoustic scene classification under domain shift[J]. \textit{arXiv preprint} :2402.02694, 2024.
+
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\textit{\textbf{Submissions Under Review}}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{}}
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+
+        \item Greco G, \textbf{Zhang D}, Pezzoli M, et al. Distributed Acoustic Mixture-of-Experts for Spatial Sound Estimation[J]. Submitted to \textit{IEEE Open Journal of Signal Processing (ICASSP 2026 Track)}. 
+
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\section{\textbf{PATENTS}}
+
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Air sonar array device for acousto-optic linkage monitoring and positioning (CN218003722U, Active)
+        \item Wireless low-power consumption ground defense monitoring devices (CN218511891U, Active)
+        \item Pipeline gas leakage amount detection method (CN117515432A, Pending)
+        \item A passive tracking method and device for an underwater target
+ (CN116430370A, Pending)
+\\[2pt]
+    \end{itemize}
+\end{minipage}
+
+%ADDITIONAL
+\section{\textbf{ADDITIONAL}}
+
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Programming Languages: Matlab, Python, C
+        \item AI/ML Frameworks: PyTorch, TensorFlow, Keras, Scikit-learn, Librosa, Torchaudio, PyTorch Lightning 
+        \item Embedded Systems: Embedded C, STM32(L4/F1/F4/H7), ARM Cortex-M, Keil, STM32CubeIDE, RTOS, I2C, SPI, UART  
+        \item Language Skills: English(Professional Working Proficiency, TOEIC-895), Mandarin(Native) \\
+    \end{itemize}
+\end{minipage}
+
+\begin{comment}
+\section{\textbf{PROFESSIONAL REFERENCES}}
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+        \item Prof. Jianfeng Chen, Northwestern Polytechnical University, Relationship: Ph.D. Advisor, Email: chenjf@nwpu.edu.cn 
+        \item Prof. Fabio Antonacci,  Politecnico di Milano, Relationship: Ph.D. Advisor, Email: fabio.antonacci@polimi.it
+        \item Prof. Alberto Bernardini,  Politecnico di Milano, Relationship: Ph.D. Advisor, Email: alberto.bernardini@polimi.it        
+    \end{itemize}
+\end{minipage}
+\end{comment}
+
+
+\end{document}

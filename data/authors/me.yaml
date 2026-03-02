@@ -2,99 +2,112 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Alex Johnson
-  given: Alex
-  family: Johnson
+  display: Dongzhe Zhang
+  given: Dongzhe
+  family: Zhang
 postnominals: []
 status:
-  icon: "💻"  # Emoji shown on avatar badge: 💻 developer, 🎨 designer, 🚀 startup, 🔬 researcher, 🎓 student
-role: Full-Stack Developer
-email: alex@example.com
+  icon: "🔬"  # researcher
+role: Ph.D. Researcher — Audio & Acoustic Sensing
+email: dongzhe.zhang@polimi.it
 bio: |
-  Full-stack developer with 5+ years of experience building scalable web applications.
-  Passionate about modern JavaScript, cloud architecture, and creating delightful user experiences.
+  Dual Ph.D. student (Politecnico di Milano & Northwestern Polytechnical University) working on
+  deep learning for audio, microphone array processing, sound source localization and speech
+  enhancement. Technical co-founder of an acoustic startup with experience in embedded audio
+  systems and edge AI deployment.
 
 affiliations:
-  - name: Tech Corp
-    url: https://techcorp.example.com
+  - name: Politecnico di Milano
+    url: https://www.polimi.it
+  - name: Northwestern Polytechnical University
+    url: https://www.nwpu.edu.cn
+  - name: LianFeng Acoustic Technologies
 
 links:
   - icon: at-symbol
-    url: mailto:alex@example.com
-    label: E-mail Me
-  - icon: brands/github
-    url: https://github.com/alexjohnson
+    url: mailto:dongzhe.zhang@polimi.it
+    label: E-mail
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnson/
-  - icon: brands/x
-    url: https://x.com/alexjohnson
+    url: https://www.linkedin.com/in/dongzhe-zhang-88aa95280
+    label: LinkedIn
+  - icon: graduation-cap
+    url: https://scholar.google.com.hk/citations?user=xjqVk8MAAAAJ&hl=zh-CN
+    label: Google Scholar
 
 interests:
-  - Web Development
-  - Cloud Architecture
-  - Open Source
-  - Developer Experience
+  - Deep Learning for Audio
+  - Microphone Array Processing
+  - Sound Source Localization
+  - Speech Enhancement
+  - Edge AI and Embedded Systems
 
 education:
-  - degree: B.S. Computer Science
-    institution: State University
-    start: 2015-09-01
-    end: 2019-05-31
+  - degree: Ph.D. (Dual)
+    institution: Politecnico di Milano & Northwestern Polytechnical University
+    start: 2022-04-01
+    end: 2027-04-01
     summary: |
-      Focus on software engineering and distributed systems.
-      Senior project on distributed caching systems.
-    button:
-      text: View Project
-      url: https://github.com/alexjohnson/senior-project
-      icon: brands/github
+      Dual Ph.D. program; research labs: Image and Sound Processing Lab (ISPL) and Joint
+      Laboratory of Environmental Sound Sensing.
+  - degree: M.Eng. Electronic and Communication Engineering
+    institution: Northwestern Polytechnical University
+    start: 2019-09-01
+    end: 2022-04-01
+  - degree: B.Eng. Electronic Information Engineering
+    institution: Shaoxing University
+    start: 2015-09-01
+    end: 2019-06-01
 
 experience:
-  - role: Senior Software Engineer
-    org: Tech Corp
-    start: 2023-01-01
+  - role: Technical Co-founder & Acoustic Engineer
+    org: LianFeng Acoustic Technologies Co., Ltd.
+    start: 2020-10-01
+    end: 2024-10-01
     summary: |
-      Lead development of microservices architecture serving 1M+ users.
-      Improved API response time by 40% through optimization.
-      Mentored team of 5 junior developers.
-  - role: Full-Stack Developer
-    org: Startup Inc
-    start: 2021-06-01
-    end: 2022-12-31
+      Co-founded an acoustic technology startup; led a team to develop and commercialize
+      acoustic sensing products, driving R&D from algorithms to embedded deployment.
+  - role: Embedded Software Engineer
+    org: Tianhe Defense Technology Co., Ltd.
+    start: 2019-06-01
+    end: 2019-10-01
     summary: |
-      Built and deployed 3 production applications from scratch.
-      Implemented CI/CD pipeline reducing deployment time by 60%.
-      Led migration from monolith to microservices architecture.
-  - role: Junior Developer
-    org: Web Agency
-    start: 2020-01-01
-    end: 2021-05-31
-    summary: |
-      Developed client websites using React and modern web technologies.
-      Participated in code reviews and agile ceremonies.
+      Developed firmware for an unmanned underwater vehicle control unit and an edge
+      passive target detection algorithm for single-hydrophone sensing.
 
 skills:
-  - name: Development
+  - name: ML & Signal Processing
     items:
-      - label: TypeScript
-        level: 5
-      - label: React
-        level: 5
-      - label: Node.js
+      - label: Matlab
         level: 5
       - label: Python
-        level: 4
-  - name: DevOps
-    items:
-      - label: Docker
-        level: 4
-      - label: AWS
-        level: 4
-      - label: CI/CD
         level: 5
+      - label: PyTorch
+        level: 5
+      - label: TensorFlow
+        level: 4
+      - label: Librosa / Torchaudio
+        level: 4
+  - name: Embedded & Systems
+    items:
+      - label: C / Embedded C
+        level: 5
+      - label: STM32 (L4/F1/F4/H7)
+        level: 5
+      - label: ARM Cortex-M
+        level: 4
+      - label: RTOS / STM32CubeIDE / Keil
+        level: 4
 
 languages:
   - name: English
     level: 5
+    label: Professional Working Proficiency
+  - name: Mandarin
+    level: 5
     label: Native
 
-awards: []
+awards:
+  - 2nd Place, DCASE 2024 Challenge Task 10 (Acoustic-Based Traffic Monitoring)
+  - Rank 6, DCASE 2023 Challenge Task 3
+  - Gold Award, China International "Internet+" College Students' Innovation and Entrepreneurship Competition, 2021
+
