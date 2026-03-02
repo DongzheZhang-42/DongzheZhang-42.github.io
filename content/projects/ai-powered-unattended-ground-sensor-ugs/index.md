@@ -12,7 +12,6 @@ tech_stack:
   - PyTorch
   - Signal Processing
 featured: true
-draft: true
 status: "Completed"
 role: "Technical Co-founder & Acoustic Engineer"
 duration: "May 2021 - Oct 2024"

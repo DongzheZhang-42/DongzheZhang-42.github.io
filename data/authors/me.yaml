@@ -30,7 +30,7 @@ links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/dongzhe-zhang-88aa95280
     label: LinkedIn
-  - icon: graduation-cap
+  - icon: academicons/google-scholar
     url: https://scholar.google.com.hk/citations?user=xjqVk8MAAAAJ&hl=zh-CN
     label: Google Scholar
 

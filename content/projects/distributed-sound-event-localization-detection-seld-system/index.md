@@ -12,7 +12,6 @@ tech_stack:
   - MATLAB
   - Deep Learning
 featured: true
-draft: true
 status: "Completed"
 role: "Technical Co-founder & Acoustic Engineer"
 duration: "Oct 2020 - Oct 2022"

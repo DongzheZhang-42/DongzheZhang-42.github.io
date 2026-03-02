@@ -12,7 +12,6 @@ tech_stack:
   - ARM Cortex-M
   - Signal Processing
 featured: true
-draft: true
 status: "Completed"
 role: "Embedded Software Engineer"
 duration: "Jun 2019 - Oct 2019"
