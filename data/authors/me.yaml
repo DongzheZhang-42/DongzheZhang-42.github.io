@@ -8,13 +8,16 @@ name:
 postnominals: []
 status:
   icon: "🔬"  # researcher
-role: Ph.D. Researcher — Audio & Acoustic Sensing
+role: Ph.D. Student in Audio AI & Acoustic Sensing
 email: dongzhe.zhang@polimi.it
 bio: |
-  Dual Ph.D. student (Politecnico di Milano & Northwestern Polytechnical University) working on
-  deep learning for audio, microphone array processing, sound source localization and speech
-  enhancement. Technical co-founder of an acoustic startup with experience in embedded audio
-  systems and edge AI deployment.
+  Ph.D. student at Politecnico di Milano.
+
+  Former Technical Co-founder of an acoustic startup.
+
+  Currently seeking opportunities as an Audio Algorithm Engineer or Embedded AI Engineer.
+
+  Speech enhancement | Source localization | Event detection | Microphone array
 
 affiliations:
   - name: Politecnico di Milano
@@ -24,13 +27,10 @@ affiliations:
   - name: LianFeng Acoustic Technologies
 
 links:
-  - icon: at-symbol
-    url: mailto:dongzhe.zhang@polimi.it
-    label: E-mail
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/dongzhe-zhang-88aa95280
     label: LinkedIn
-  - icon: academicons/google-scholar
+  - icon: brands/google-scholar
     url: https://scholar.google.com.hk/citations?user=xjqVk8MAAAAJ&hl=zh-CN
     label: Google Scholar
 

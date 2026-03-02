@@ -1,24 +1,107 @@
 ---
-title: "AI-Powered Unattended Ground Sensor (UGS)"
+title: "Acoustic-Vibration Unattended Ground Sensor (UGS)"
 date: 2021-05-01
-summary: "Engineered end-to-end STM32 signal-processing pipeline and deployed deep learning models for real-time anomaly detection under low-power constraints."
+summary: "A low-power wireless perimeter monitoring project combining acoustic-vibration fusion, edge AI inference, and embedded system integration for long-duration autonomous operation."
 tags:
-  - Embedded Systems
+  - Edge UGS
   - Edge AI
-  - Acoustic Sensing
+  - Embedded Systems
+  - Acoustic-Vibration Fusion
+  - Low Power
 tech_stack:
   - Embedded C
   - STM32
   - PyTorch
-  - Signal Processing
+  - LoRa
+  - DSP / STFT
 featured: true
+share: false
+weight: 4
 status: "Completed"
-role: "Technical Co-founder & Acoustic Engineer"
+role: "Core Algorithm Designer & Embedded Systems Engineer"
 duration: "May 2021 - Oct 2024"
 team_size: 5
 highlights:
-  - "Implemented edge pipeline from sensing to controller reporting"
-  - "Achieved real-time anomaly detection with hardware/software co-optimization"
+  - "Designed and deployed an end-to-end acoustic-vibration detection pipeline on STM32 edge devices"
+  - "Implemented low-power state-machine execution with robust wireless reporting for unattended deployment"
+image:
+  filename: 0ecd9b67-44ad-48c4-9a5e-46aabd775368.png
+  preview_only: true
 ---
 
-This project implemented an end-to-end unattended ground sensing pipeline on STM32, from acquisition and on-device signal processing to result reporting. It integrated deep learning-based anomaly detection for sound and vibration events with strict low-power optimization for long-running edge deployment.
+## Context and Objective
+
+This project targeted unattended perimeter monitoring with strict constraints on power, computation, and wireless reliability.  
+The objective was to build a deployable edge-intelligence pipeline that remains stable over long-duration field operation.
+
+In one sentence: I translated acoustic-vibration sensing research into a practical low-power embedded system with end-to-end validation.
+
+## My Contributions
+
+- Designed frequency-domain features and lightweight model architecture for resource-constrained MCUs  
+- Implemented embedded firmware for acquisition, inference triggering, communication, and power-state transitions  
+- Built an integrated validation workflow from node-level performance to multi-node field operation
+
+## Technical Approach
+
+### 1) Edge Feature and Model Design
+
+The core feature uses short-time spectral energy:
+
+\[
+10\log_{10}(|\text{STFT}|^2)
+\]
+
+I combined this representation with a compact `Conv -> ReLU -> MaxPool -> FC` network to balance detection sensitivity and computational cost on MCU hardware.
+
+### 2) Low-Power Embedded Execution
+
+On the embedded side, I implemented continuous ADC sampling, DMA-based transfer, and interrupt-driven wake-up control.  
+A state-machine firmware design reduced idle overhead and enabled long-term unattended operation while preserving event responsiveness.
+
+### 3) Wireless System Integration
+
+Using LoRa-based reporting, each node can upload detection events and runtime status to the monitoring platform.  
+This supports distributed deployment, device-health monitoring, and practical maintenance in real outdoor scenarios.
+
+## Deployment and Validation
+
+| Metric | Result | Engineering Implication |
+| --- | --- | --- |
+| Edge Inference | 128-point STFT + lightweight CNN | Feasible real-time inference on constrained MCU resources |
+| Detection Quality | Walk recall > 90% at 12-24 m | Reliable perception in outdoor conditions |
+| Power Behavior | Long unattended runtime | State-machine control lowers average consumption |
+| System-Level Operation | Real-time node-to-platform reporting | Supports scalable multi-node deployment |
+
+### Interface and Runtime Monitoring
+
+<a href="ugs-dashboard.png" target="_blank" rel="noopener">
+  <img src="ugs-dashboard.png" alt="UGS System Interface" />
+</a>
+
+*Figure 1. End-to-end workflow from on-device inference to event reporting and status monitoring.*
+
+### Embedded Hardware Platform
+
+<a href="dd3d9b98-8449-42d4-a748-a93840fa2cc6.png" target="_blank" rel="noopener">
+  <img src="dd3d9b98-8449-42d4-a748-a93840fa2cc6.png" alt="UGS Mainboard" />
+</a>
+
+*Figure 2. Hardware integration of MCU, wireless module, and sensing interfaces for low-power operation.*
+
+### Field Deployment
+
+<a href="331768ef-60c7-440b-8a27-fc486140203f.png" target="_blank" rel="noopener">
+  <img src="331768ef-60c7-440b-8a27-fc486140203f.png" alt="UGS Field Deployment" />
+</a>
+
+*Figure 3. Multi-node outdoor deployment used for long-duration validation and robustness testing.*
+
+## Research-Oriented Value
+
+This project demonstrates transferable competence across signal processing, model compression, firmware implementation, and field deployment.  
+It emphasizes my ability to develop research-grounded methods that remain robust under realistic embedded constraints.
+
+## Related Patent
+
+- [Wireless low-power consumption ground defense monitoring devices (CN218511891U)](https://patents.google.com/patent/CN218511891U/en?oq=CN218511891U)
