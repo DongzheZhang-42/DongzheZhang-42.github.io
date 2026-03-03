@@ -31,9 +31,8 @@ highlights:
 ## Context and Objective
 
 Most multichannel speech enhancement models are strongly coupled to microphone geometries seen during training.  
-This project addresses that bottleneck by developing a geometry-agnostic framework that generalizes across array layouts while remaining computationally efficient.
-
-In one sentence: I designed a deployable enhancement pipeline that improves cross-array robustness without sacrificing efficiency.
+This project addresses that bottleneck by developing a geometry-agnostic framework that generalizes across array layouts while remaining computationally efficient.  
+This project has produced two papers accepted by **ICASSP 2026**.
 
 ## My Contributions
 
@@ -43,17 +42,24 @@ In one sentence: I designed a deployable enhancement pipeline that improves cros
 
 ## Technical Approach
 
-### 1) Spatial Filter Bank Design
+### 1) Spatial Filter Bank (SFB) Design
 
-I designed SFB configurations using spatial coverage analysis to preserve directional information while minimizing redundant channels.
+For arbitrary planar arrays, we first build geometry-aware steering vectors in the STFT domain, then use modal matching to map a predefined target beampattern into implementable spatial filters.  
+In practice, each steered filter is solved using a minimum-norm solution (equivalent to maximizing White Noise Gain, WNG), and multiple steering directions are combined to form the SFB.  
+This process linearly projects geometry-dependent microphone signals into a fixed-dimensional channel space, providing a geometry-agnostic representation for the back-end network.
 
-### 2) Geometry-Agnostic Representation
+### 2) SFB Channel Number Optimization Principle
 
-Raw multichannel audio is projected into an orthogonal Eigenbeam-domain feature space, enabling consistent model behavior across unseen planar array geometries.
+The key conclusion is that the SFB channel number I should not be chosen empirically, but derived from beampattern spatial coverage characteristics.  
+If I is too small, spatial coverage gaps appear; if I is too large, angular oversampling leads to highly correlated adjacent channels and redundant features.  
+Therefore, we constrain the adjacent main-lobe interval 2pi/I to lie within the effective range defined by BW-3dB and BW-6dB, balancing complete coverage and minimal redundancy.  
+Under the second-order supercardioid and first-order hypercardioid settings reported in the paper, the optimal channel count concentrates around 3 and is validated by ablation studies.
 
-### 3) Efficient Enhancement Architecture
+### 3) Efficient SFB-LSTM Enhancement Architecture
 
-To reduce computational burden, I replaced heavy MHSA components with lightweight LSTM blocks and introduced a Multi-order Spatial Encoder Network (MSEN) for parallel spatial feature modeling.
+After front-end redundancy is reduced, the back-end no longer needs high-complexity MHSA modules for effective feature modeling.  
+We therefore replace the Conformer-style heavy attention path with a lightweight dual-LSTM design: one block models temporal dependencies, and the other models frequency dependencies, together with an encoder-decoder reconstruction pipeline.  
+The resulting SFB-LSTM system maintains comparable or better enhancement quality under randomized array conditions while significantly reducing GFLOPS, making it more suitable for edge deployment.
 
 ## Results and Validation
 
@@ -70,18 +76,14 @@ These results indicate improved portability to heterogeneous edge devices with l
 
 ## Spatial Coverage Analysis
 
-<div style="display:flex; gap:1rem; flex-wrap:wrap;">
-  <a href="beam_I3.png" target="_blank" rel="noopener">
-    <img src="beam_I3.png" alt="3-channel beampattern coverage" style="max-width:48%; min-width:260px;" />
+<div style="display:flex; gap:1rem; align-items:flex-start;">
+  <a href="beam_I3.png" target="_blank" rel="noopener" style="flex:1 1 0;">
+    <img src="beam_I3.png" alt="3-channel beampattern coverage" style="width:100%; height:auto;" />
   </a>
-  <a href="beam_I5.png" target="_blank" rel="noopener">
-    <img src="beam_I5.png" alt="5-channel beampattern oversampling" style="max-width:48%; min-width:260px;" />
+  <a href="beam_I5.png" target="_blank" rel="noopener" style="flex:1 1 0;">
+    <img src="beam_I5.png" alt="5-channel beampattern oversampling" style="width:100%; height:auto;" />
   </a>
 </div>
 
 *Figure 2. The 3-channel configuration (left) provides efficient spatial coverage, while the 5-channel setting (right) introduces oversampling and feature redundancy.*
 
-## Research-Oriented Value
-
-This work highlights my strengths in bridging acoustic theory, deep learning design, and practical deployment constraints.  
-It emphasizes reproducible methodology and hardware-transferable modeling rather than device-specific optimization.

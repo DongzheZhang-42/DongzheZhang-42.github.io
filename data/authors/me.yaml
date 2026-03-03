@@ -45,7 +45,7 @@ education:
   - degree: Ph.D. (Dual)
     institution: Politecnico di Milano & Northwestern Polytechnical University
     start: 2022-04-01
-    end: 2027-04-01
+    end: 2026-12-01
     summary: |
       Dual Ph.D. program; research labs: Image and Sound Processing Lab (ISPL) and Joint
       Laboratory of Environmental Sound Sensing.
@@ -66,7 +66,7 @@ experience:
     summary: |
       Co-founded an acoustic technology startup; led a team to develop and commercialize
       acoustic sensing products, driving R&D from algorithms to embedded deployment.
-  - role: Embedded Software Engineer
+  - role: Embedded Software Engineer (Internship)
     org: Tianhe Defense Technology Co., Ltd.
     start: 2019-06-01
     end: 2019-10-01

@@ -1,7 +1,7 @@
 ---
 title: "Acoustic-Vibration Unattended Ground Sensor (UGS)"
 date: 2021-05-01
-summary: "A low-power wireless perimeter monitoring project combining acoustic-vibration fusion, edge AI inference, and embedded system integration for long-duration autonomous operation."
+summary: "A low-power wireless perimeter monitoring project that combines acoustic-vibration sensing, edge AI inference, and embedded system integration for long-duration unattended operation."
 tags:
   - Edge UGS
   - Edge AI
@@ -31,38 +31,28 @@ image:
 
 ## Context and Objective
 
-This project targeted unattended perimeter monitoring with strict constraints on power, computation, and wireless reliability.  
-The objective was to build a deployable edge-intelligence pipeline that remains stable over long-duration field operation.
-
-In one sentence: I translated acoustic-vibration sensing research into a practical low-power embedded system with end-to-end validation.
+This project targeted unattended perimeter monitoring under strict constraints on power, computation, and wireless reliability.  
+I deployed an AI detection model on STM32 chips and achieved efficient target detection performance.  
+The objective was to build a deployable edge-intelligence pipeline that remains stable during long-duration field operation.
 
 ## My Contributions
 
-- Designed frequency-domain features and lightweight model architecture for resource-constrained MCUs  
+- Designed frequency-domain features and a lightweight model architecture for resource-constrained MCUs  
 - Implemented embedded firmware for acquisition, inference triggering, communication, and power-state transitions  
+- Designed a multi-node communication protocol to support inter-node collaboration and reliable platform-side reporting  
 - Built an integrated validation workflow from node-level performance to multi-node field operation
 
 ## Technical Approach
 
 ### 1) Edge Feature and Model Design
 
-The core feature uses short-time spectral energy:
-
-\[
-10\log_{10}(|\text{STFT}|^2)
-\]
-
-I combined this representation with a compact `Conv -> ReLU -> MaxPool -> FC` network to balance detection sensitivity and computational cost on MCU hardware.
+At the feature level, I built a time-frequency representation based on short-time spectral energy distribution to improve sensitivity to target behavior, and used normalization and windowing strategies to increase robustness in complex environments.  
+At the model level, I adopted a compact `Conv -> ReLU -> MaxPool -> FC` structure to balance detection accuracy and computational efficiency on STM32, meeting real-time edge execution requirements.
 
 ### 2) Low-Power Embedded Execution
 
-On the embedded side, I implemented continuous ADC sampling, DMA-based transfer, and interrupt-driven wake-up control.  
-A state-machine firmware design reduced idle overhead and enabled long-term unattended operation while preserving event responsiveness.
-
-### 3) Wireless System Integration
-
-Using LoRa-based reporting, each node can upload detection events and runtime status to the monitoring platform.  
-This supports distributed deployment, device-health monitoring, and practical maintenance in real outdoor scenarios.
+On the embedded side, I implemented continuous ADC sampling, DMA-based data transfer, and interrupt-driven wake-up control.  
+The state-machine firmware design reduced idle overhead and enabled long-term unattended operation while preserving event responsiveness.
 
 ## Deployment and Validation
 
@@ -96,11 +86,6 @@ This supports distributed deployment, device-health monitoring, and practical ma
 </a>
 
 *Figure 3. Multi-node outdoor deployment used for long-duration validation and robustness testing.*
-
-## Research-Oriented Value
-
-This project demonstrates transferable competence across signal processing, model compression, firmware implementation, and field deployment.  
-It emphasizes my ability to develop research-grounded methods that remain robust under realistic embedded constraints.
 
 ## Related Patent
 
