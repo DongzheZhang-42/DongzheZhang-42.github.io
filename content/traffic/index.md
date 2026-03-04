@@ -1,20 +1,44 @@
 ---
 title: "Traffic Dashboard"
-summary: "Website visitors by country and total visits."
+summary: "网站访问来源与总量可视化。"
 date: 2026-03-04
 type: page
+show_date: false
+show_reading_time: false
 ---
 
-This dashboard shows website traffic and visitor countries from Google Analytics 4.
+<style>
+  .traffic-wrap {
+    margin-top: 0.8rem;
+  }
+  .traffic-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    background: #020617;
+    padding: 1.2rem;
+    text-align: center;
+  }
+  .traffic-note {
+    margin-top: 0.8rem;
+    color: #94a3b8;
+    font-size: 0.92rem;
+  }
+  .traffic-map {
+    min-height: 260px;
+  }
+</style>
 
-Replace the iframe `src` URL below with your own Looker Studio embed link.
-
-<iframe
-  width="100%"
-  height="900"
-  src="https://lookerstudio.google.com/embed/reporting/f0595bf8-44cf-4af4-8c87-6710177a2836/page/Ou9qF"
-  frameborder="0"
-  style="border:0"
-  allowfullscreen
-  sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-></iframe>
+<div class="traffic-wrap">
+  <div class="traffic-card">
+    <div class="traffic-map">
+      <script
+        type="text/javascript"
+        id="mapmyvisitors"
+        src="https://mapmyvisitors.com/map.js?d=m97bUhG_cTH-e4S5sQKYqXCCZA2hoiZkzsPt-lWO6IA&cl=ffffff&w=a"
+      ></script>
+    </div>
+    <p class="traffic-note">Live visitor map and pageview counter.</p>
+  </div>
+</div>
