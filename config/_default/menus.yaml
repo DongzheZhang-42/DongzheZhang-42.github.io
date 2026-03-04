@@ -18,3 +18,6 @@ main:
   - name: Photos
     url: /photos
     weight: 40
+  - name: Traffic
+    url: /traffic
+    weight: 50
