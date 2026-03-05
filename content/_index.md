@@ -382,8 +382,8 @@ sections:
       text: |-
         I'm always interested in hearing about new projects and opportunities.
         Whether you're looking to hire, collaborate, or just want to say hi, feel free to reach out!
-      email: "dongzhe.zhang@polimi.it"
-      autolink: true
+      email: "dongzhe.zhang [at] polimi [dot] it"
+      autolink: false
     design:
       columns: '1'
       background:
@@ -401,10 +401,6 @@ sections:
         I'm currently looking for **senior engineering** or **tech lead** roles.
         
         Let's connect and discuss how I can help your team.
-      button:
-        text: 'Download Resume'
-        url: /uploads/Resume_DongzheZhang.pdf
-        new_tab: true
     design:
       card:
         # Light mode: soft pastel theme gradient | Dark mode: rich deep gradient

@@ -114,6 +114,15 @@ System validation was performed not only in controlled laboratory settings, but 
   </figure>
 </div>
 
+### 4) Application Scenarios
+
+<figure style="margin:1rem 0 0 0;">
+  <a href="application-scenario-collage.png" target="_blank" rel="noopener">
+    <img src="application-scenario-collage.png" alt="Acoustic camera practical application scenarios" />
+  </a>
+  <figcaption style="font-size:0.9rem; opacity:0.85;">Figure 8. Practical application scenarios of the acoustic camera system in industrial environments.</figcaption>
+</figure>
+
 ## Related Patent
 
 - [A method for detecting pipeline gas leakage (CN117515432A)](https://patents.google.com/patent/CN117515432A/en?oq=CN117515432A)

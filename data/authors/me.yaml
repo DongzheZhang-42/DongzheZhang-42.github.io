@@ -9,13 +9,11 @@ postnominals: []
 status:
   icon: "🎙️"  # microphone/audio research
 role: Ph.D. Student in Audio AI & Acoustic Sensing
-email: dongzhe.zhang@polimi.it
+email: dongzhe.zhang [at] polimi [dot] it
 bio: |
   Ph.D. student at Politecnico di Milano.
 
   Former Technical Co-founder of an acoustic startup.
-
-  Currently seeking opportunities as an Audio Algorithm Engineer or Embedded AI Engineer.
 
   Speech enhancement | Source localization | Event detection | Microphone array
 

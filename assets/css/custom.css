@@ -1,0 +1,10 @@
+/* Improve visual separation between author name and role. */
+section#authors h2 + p,
+section#authors h3 + p,
+section#authors h4 + p,
+.author-card h2 + p,
+.author-card h3 + p,
+.author-card h4 + p,
+.author-card [class*="font-bold"] + [class*="font-semibold"] {
+  margin-top: 0.4rem !important;
+}
