@@ -200,11 +200,11 @@ sections:
       spacing:
         padding: ["4rem", "0", "4rem", "0"]
 
-  # Achievements: Publications, Patents, Competitions
+  # Research Highlights: Publications, Patents, Competitions
   - block: markdown
     id: achievements
     content:
-      title: Achievements
+      title: Research Highlights
       subtitle: Publications, Patents, and Competitions
       text: |-
         <style>
