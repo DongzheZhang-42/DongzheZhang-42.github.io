@@ -28,10 +28,47 @@ show_reading_time: false
   .traffic-map {
     min-height: 260px;
   }
+  .traffic-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .traffic-item {
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 12px;
+    padding: 0.9rem;
+    background: rgba(15, 23, 42, 0.7);
+  }
+  .traffic-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  .traffic-value {
+    color: #f8fafc;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
 </style>
 
 <div class="traffic-wrap">
   <div class="traffic-card">
+    <div class="traffic-stats">
+      <div class="traffic-item">
+        <div class="traffic-label">Main counter - total page views</div>
+        <div class="traffic-value" id="busuanzi_value_site_pv">--</div>
+      </div>
+      <div class="traffic-item">
+        <div class="traffic-label">Main counter - total visitors</div>
+        <div class="traffic-value" id="busuanzi_value_site_uv">--</div>
+      </div>
+      <div class="traffic-item">
+        <div class="traffic-label">Traffic page views</div>
+        <div class="traffic-value" id="busuanzi_value_page_pv">--</div>
+      </div>
+    </div>
     <div class="traffic-map">
       <script
         type="text/javascript"
@@ -39,6 +76,8 @@ show_reading_time: false
         src="https://mapmyvisitors.com/map.js?d=m97bUhG_cTH-e4S5sQKYqXCCZA2hoiZkzsPt-lWO6IA&cl=ffffff&w=a"
       ></script>
     </div>
-    <p class="traffic-note">Live visitor map and pageview counter.</p>
+    <p class="traffic-note">
+      Main counter tracks all pages globally; map shows geographic distribution.
+    </p>
   </div>
 </div>
