@@ -108,7 +108,7 @@ hugoblox:
     style: minimal                      # minimal | columns | centered
     language_switcher: true
     # Custom footer text (HTML supported)
-    text: ""
+    text: '<script type="text/javascript" src="https://mapmyvisitors.com/map.js?d=m97bUhG_cTH-e4S5sQKYqXCCZA2hoiZkzsPt-lWO6IA&cl=ffffff&w=d"></script>'
 
   # ────────────────────────────────────────────────────────────────────────────
   # COPYRIGHT
